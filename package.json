@@ -1,0 +1,23 @@
+{
+  "name": "ecommerce-gateway-dashboard",
+  "version": "1.0.0",
+  "description": "E-Commerce Gateway & Dashboard - Composite API (UTCH DWI U3)",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "composite-api",
+    "microservices",
+    "aggregator"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

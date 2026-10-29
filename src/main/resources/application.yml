@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ecommerce-gateway
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    default-property-inclusion: non_null
+
+app:
+  internal-base-url: http://127.0.0.1:${server.port}
+  frankfurter-url: https://api.frankfurter.app/latest?from=USD&to=MXN
+  request-timeout-ms: 5000
