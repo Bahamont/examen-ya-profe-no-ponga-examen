@@ -1,0 +1,10 @@
+{
+  "product_id": "P-101",
+  "title": "Laptop Gamer XYZ",
+  "price_usd": 1200.0,
+  "price_mxn": 22497.0,
+  "stock_status": "IN_STOCK",
+  "available_units": 15,
+  "currency_conversion_source": "Frankfurter External API",
+  "status": "SUCCESS"
+}
