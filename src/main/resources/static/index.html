@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Gateway | Composite API</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">UTCH · Desarrollo Web Integral · U3 · Spring Boot</p>
+        <h1>E-Commerce Gateway &amp; Dashboard</h1>
+      </div>
+      <span class="badge">Composite API</span>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Consulta de producto</h2>
+        <p class="muted">
+          El cliente web hace <strong>una sola petición</strong> a la API agregadora.
+          Spring Boot orquesta catálogo, inventario y Frankfurter con <code>CompletableFuture</code>.
+        </p>
+        <form id="search-form" class="search">
+          <label for="product-id">ID de producto</label>
+          <div class="row">
+            <select id="product-id">
+              <option value="P-101">P-101 — Laptop Gamer XYZ</option>
+              <option value="P-102">P-102 — Audífonos Inalámbricos Nova</option>
+              <option value="P-103">P-103 — Monitor Ultrawide 34"</option>
+            </select>
+            <button type="submit">Obtener resumen</button>
+          </div>
+        </form>
+        <div id="product-card" class="card empty">Selecciona un producto para cargar el resumen unificado.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Contrato consolidado</h2>
+        <pre id="composite-json" class="code">{}</pre>
+      </section>
+
+      <section class="panel wide">
+        <h2>Evidencia de microservicios</h2>
+        <p class="muted">Peticiones individuales (las mismas que orquesta el Composite API).</p>
+        <div class="grid-3">
+          <article>
+            <h3>1. Catálogo (propia)</h3>
+            <pre id="catalog-json" class="code">{}</pre>
+          </article>
+          <article>
+            <h3>2. Inventario (propia)</h3>
+            <pre id="inventory-json" class="code">{}</pre>
+          </article>
+          <article>
+            <h3>3. Frankfurter (terceros)</h3>
+            <pre id="fx-json" class="code">{}</pre>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
