@@ -19,7 +19,7 @@ form.addEventListener("submit", async (event) => {
   const [catalog, inventory, fx, composite] = await Promise.all([
     loadJson(`/microservices/products/${id}`),
     loadJson(`/microservices/inventory/${id}`),
-    loadJson("https://api.frankfurter.app/latest?from=USD&to=MXN"),
+    loadJson("/microservices/fx/usd-mxn"),
     loadJson(`/api/v1/product-summary/${id}`)
   ]);
 
