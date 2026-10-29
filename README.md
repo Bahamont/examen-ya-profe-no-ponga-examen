@@ -14,8 +14,10 @@ La rama **`main` no se modifica**. El desarrollo se integra en **`dev`** con ram
 ## Ejecución
 
 ```bash
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
+
+En Windows: `mvnw.cmd spring-boot:run`
 
 - Dashboard: http://localhost:8080
 - Health: http://localhost:8080/health
